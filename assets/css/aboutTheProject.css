@@ -1,0 +1,149 @@
+/* ===================================================
+   SEUS RESETS E CONFIGURAÇÕES DE FONTES ORIGINAIS
+=================================================== */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: roboto, sans-serif;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+header {
+    position: absolute; /* fica por cima da imagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* maior que tudo */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    font-family: roboto, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+nav a:hover {
+    color: #d8db4e;
+}
+
+h1 {
+    font-size: clamp(28px, 4vw, 56px);
+    line-height: 1.2;
+    color: white;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 48px);
+    margin: 30px 0 10px 0;
+    color: white;
+}
+
+/* ===================================================
+   SUA CLASSE INFOLIST ORIGINAL
+=================================================== */
+.infoList {
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.infoList li {
+    margin-bottom: 10px;
+    color: #E6EDF3;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* ===================================================
+   SEU BOTÃO ORIGINAL
+=================================================== */
+.btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3B82F6, #eef65c);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Modificador exclusivo para centralizar o botão nesta página */
+.btn-center {
+    display: block;
+    width: max-content;
+    margin: 40px auto 0 auto;
+}
+
+/* ===================================================
+   SEU FOOTER ORIGINAL
+=================================================== */
+footer {
+    background: #0B0F14;
+    color: #9AA6B2;
+    padding: 30px;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3B82F6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #8B5CF6;
+}
+
+/* ===================================================
+   ESTRUTURA DE LAYOUT ADAPTADA DA SUA SECTION
+=================================================== */
+#aboutSection {
+    width: 100%;
+    /* Mudamos de 100vh para min-height para o texto longo não vazar */
+    min-height: 100vh; 
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical (centro) */
+    align-items: center;     /* horizontal (centro) */
+
+    /* Aumentamos o padding superior para 140px para proteger seu header absolute */
+    padding: 140px 40px 60px 40px; 
+}
+
+/* Limitador de largura para manter a leitura confortável */
+.about-content {
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.about-content p {
+    color: #E6EDF3;
+    line-height: 1.6;
+    font-size: clamp(14px, 1.2vw, 18px);
+    margin-bottom: 15px;
+}

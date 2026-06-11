@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Comparador de Empresas - Gigantes do Trecho</title>
+    <link rel="stylesheet" href="assets/css/companyComparator.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Página Inicial</a>
+            <a href="aboutTheProject.html">Sobre o Projeto</a>
+        </nav>
+    </header>
+
+    <section id="comparatorSection">
+        <div class="control-panel">
+            <h1>Comparador de Empresas</h1>
+            <p class="subtitle">Selecione duas operadoras do trecho RJ-SP para comparar dados lado a lado.</p>
+            
+            <div class="selectors-wrapper">
+                <div class="select-box">
+                    <label for="company1">Empresa 1:</label>
+                    <select id="company1">
+                        <option value="1001" selected>Viação 1001</option>
+                        <option value="aguia">Viação Águia Branca</option>
+                        <option value="penha">Viação N. S. da Penha</option>
+                        <option value="itapemirim">Viação Itapemirim</option>
+                    </select>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <div class="select-box">
+                    <label for="company2">Empresa 2:</label>
+                    <select id="company2">
+                        <option value="1001">Viação 1001</option>
+                        <option value="aguia" selected>Viação Águia Branca</option>
+                        <option value="penha">Viação N. S. da Penha</option>
+                        <option value="itapemirim">Viação Itapemirim</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Critério</th>
+                        <th id="name-col-1">Empresa 1</th>
+                        <th id="name-col-2">Empresa 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Grupo Econômico</strong></td>
+                        <td id="grupo-1">-</td>
+                        <td id="grupo-2">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Serviços</strong></td>
+                        <td id="servicos-1">-</td>
+                        <td id="servicos-2">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Configuração da Frota</strong></td>
+                        <td id="frota-1">-</td>
+                        <td id="frota-2">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Destaque Técnico</strong></td>
+                        <td id="tecnico-1">-</td>
+                        <td id="tecnico-2">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Infraestrutura</strong></td>
+                        <td id="infra-1">-</td>
+                        <td id="infra-2">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Preço Médio</strong></td>
+                        <td id="preco-1" class="price-highlight">-</td>
+                        <td id="preco-2" class="price-highlight">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diferenciais</strong></td>
+                        <td id="diferenciais-1">-</td>
+                        <td id="diferenciais-2">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 - Projeto acadêmico</p>
+            <p>Desenvolvido por: Rafah de Paula Fernandes da Cruz & Gustavo Fideles</p>
+            <p>Dados utilizados para fins educacionais</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/companyComparator.js"></script>
+</body>
+</html>

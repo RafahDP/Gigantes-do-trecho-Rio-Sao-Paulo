@@ -1,0 +1,217 @@
+/* RESET básico (importante) */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: roboto, sans-serif;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+header {
+    position: absolute; /* fica por cima da imagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* maior que tudo */
+    padding: 20px;
+}
+
+/* NAV mais bonito */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+    gap: 20px;
+}
+
+/* LINKS */
+nav a {
+    color: white;
+    font-family: roboto, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+nav a:hover {
+    color: #d8db4e;
+}
+h1 {
+    font-size: clamp(28px, 4vw, 56px);
+    line-height: 1.2;
+}
+h2 {
+    font-size: clamp(24px, 3vw, 48px);
+    margin: 0;
+    color: white;
+}
+
+/* SECTION ocupa a tela toda */
+#firstSection {
+    width: 100%;
+    height: 100vh; /* 👈 altura total da tela */
+}
+#section_2, #section_3, #section_4, #section_5 {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center; /* vertical (centro) */
+    align-items: flex-start; /* horizontal (esquerda) */
+
+    padding: 40px;
+}
+
+
+/* CONTAINER */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* IMAGEM */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 👈 mantém proporção e preenche */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* OVERLAY ESCURO */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* CONTEÚDO CENTRALIZADO */
+.content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical */
+    align-items: center;     /* horizontal */
+
+    text-align: center;
+}
+.btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3B82F6, #eef65c);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+.infolist {
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+.infoList li {
+    margin-bottom: 10px;
+    color: #E6EDF3;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+footer {
+    background: #0B0F14;
+    color: #9AA6B2;
+    padding: 30px;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3B82F6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #8B5CF6;
+}
+.photo-container {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    align-items: right;
+}
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* lista ocupa mais espaço */
+.infoList {
+    flex: 1;
+}
+
+/* imagem */
+.photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+/* Alternar layout automaticamente */
+
+/* padrão: imagem à direita */
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* seções pares (imagem à esquerda) */
+#section_3 .content-row,
+#section_5 .content-row {
+    flex-direction: row-reverse;
+}
+#section_2, #section_3, #section_4, #section_5 {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+} 
+/* --- ANIMAÇÃO DE SCROLL --- */
+
+/* 1. Estado inicial das imagens (Escondidas e levemente para baixo) */
+.animar-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 2. Estado final (Aparecem e voltam para a posição original) */
+.animar-scroll.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
